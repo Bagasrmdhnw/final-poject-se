@@ -1,27 +1,43 @@
 START
 
-DECLARE total_barang,jumlah_uang,harga_barang,kembalian as interger
+DECLARE jumlah_barang,jumlah_uang,harga_barang,kembalian as number
 DECLARE input_barang, nama_barang as string
 
 WHILE input_barang = "Yes" DO
-    PRINT "Masukkan nama barang: "
-    SET nama_barang as string values
-    PRINT "Masukkan harga barang: "
-    SET harga_barang as values
-    SET total_harga = total_harga + harga_barang
-    PRINT "Apakah ingin memasukkan barang lagi? (Yes/No)"
-    SET input_barang as string values
+
+   	PRINT "Masukkan nama barang: "
+	SET nama_barang as string value
+
+	PRINT "Masukkan harga barang: "
+	SET harga_barang as number value
+
+	PRINT "Masukkan Jumlah barang: "
+	SET jumlah_barang as number value
+
+	SET total_harga = jumlah_barang * harga_barang
+
+	PRINT "Apakah ingin memasukkan barang lagi? (Yes/No)"
+	SET input_barang as string values
+
 END WHILE
 
-PRINT "Total Harga Barang: ", total_harga
+PRINT "Total Harga Barang: "
+SET total_harga as number value
+
 PRINT "Masukkan jumlah uang yang diberikan: "
-SET jumlah_uang as values
+SET jumlah_uang as number value
 
 IF jumlah_uang < total_harga THEN
-    PRINT "Maaf, uang yang Anda berikan tidak cukup."
+
+	PRINT "Maaf, uang yang Anda berikan tidak cukup."
+
 ELSE
-    SET kembalian = jumlah_uang - total_harga
-    PRINT "Terima kasih, kembalian Anda adalah: ", kembalian
+
+	SET kembalian = jumlah_uang - total_harga
+
+	PRINT "Terima kasih, kembalian Anda adalah: "
+	SET kembalian as number value
+
 END IF
 
 END
