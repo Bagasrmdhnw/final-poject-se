@@ -1,0 +1,27 @@
+START
+
+DECLARE total_barang,jumlah_uang,kembalian as interger
+DECLARE input_barang as string
+
+WHILE input_barang = "Yes" DO
+    WRITE "Masukkan nama barang: "
+    READ nama_barang
+    WRITE "Masukkan harga barang: "
+    READ harga_barang
+    SET total_harga = total_harga + harga_barang
+    WRITE "Apakah ingin memasukkan barang lagi? (Yes/No)"
+    READ input_barang
+END WHILE
+
+WRITE "Total Harga Barang: ", total_harga
+WRITE "Masukkan jumlah uang yang diberikan: "
+READ jumlah_uang
+
+IF jumlah_uang < total_harga THEN
+    WRITE "Maaf, uang yang Anda berikan tidak cukup."
+ELSE
+    SET kembalian = jumlah_uang - total_harga
+    WRITE "Terima kasih, kembalian Anda adalah: ", kembalian
+END IF
+
+END
