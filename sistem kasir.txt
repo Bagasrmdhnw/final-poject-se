@@ -1,6 +1,6 @@
 START
 
-DECLARE jumlah_barang,jumlah_uang,harga_barang,kembalian as number
+DECLARE jumlah_barang, jumlah_uang, harga_barang, kembalian as number
 DECLARE input_barang, nama_barang as string
 
 WHILE input_barang = "Yes" DO
